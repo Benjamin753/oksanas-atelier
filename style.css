@@ -1,5 +1,6 @@
 body {
     font-family: 'B612', arial;
+    background-color: #fcfcfc;
 }
 
 .center {
@@ -22,7 +23,6 @@ button {
 }
 
 img {
-    height: 50px;
-
-
+    height: 200px;
+    width: auto;
 }
