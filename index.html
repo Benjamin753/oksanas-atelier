@@ -17,10 +17,30 @@
     <h1>Bald verfügbar</h1>
     <p>Wir arbeiten hart daran, Ihnen die besten handgefertigten Produkte zu präsentieren. Folgen sie uns auf Instagram, um auf den Laufenden zu bleiben!</p>
     <a href="https://www.instagram.com/oksanas.atelier/" target="_blank"><button>Instagram</button></a>
-    <button>E-Mail</button>
 </div>
 
-
-
+<div class="container">
+    <form onsubmit="sendEmail(); reset(); return false;">
+        <input type="email" id="email" placeholder="Email id" required>
+        <textarea id="message" rows="4" placeholder="How can we help you?"></textarea>
+        <button type="submit">Send</button>
+    </form>
+</div>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+    function sendEmail(){
+        Email.send({
+    Host : "smtp.o2mail.de",
+    Username : "benjamin.tobias.t@o2mail.de",
+    Password : "Mirgorod.1",
+    To : 'anfrage@oksanas-atelier.de',
+    From : document.getElementById("email").value,
+    Subject : "New Message",
+    Body : "And this is the body"
+}).then(
+  message => alert(message)
+);
+    }
+</script>
 </body>
 </html>
